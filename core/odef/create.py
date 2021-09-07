@@ -2,9 +2,12 @@ class Create:
     username=""
     password=""
     conf_file="../../bin/config/global.pkl"
+    message=""
 
-    def __init__(self):
-        return
+    def __init__(self, username, password, confirm_password):
+        if not password==confirm_password:
+            self.message="Passwords do not match"
+        return self.message
 
     def start(self):
         return
